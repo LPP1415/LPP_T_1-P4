@@ -1,0 +1,6 @@
+# Ficheros acabados en ~
+*~
+# Ficheros con extension swp
+*.swp
+# Fichero .DS_Store de mac
+.DS_Store
