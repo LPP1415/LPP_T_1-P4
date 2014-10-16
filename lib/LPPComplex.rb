@@ -16,11 +16,11 @@ class LPPComplex
     end
 
 
-	def *(other)
-        LPPComplex.new(@a*other,@b*other) if other.is_a?Numeric
-        LPPComplex.new(@a*other.a - @b*other.b, @a*other.b + @b*other.a)if other.is_a?LPPComplex
-	end
-	def /(other)
+    def *(other)
+	return LPPComplex.new(@a*other,@b*other) if other.is_a?Numeric
+        return LPPComplex.new(@a*other.a - @b*other.b, @a*other.b + @b*other.a)if other.is_a?LPPComplex
+    end
+    def /(other)
 		LPPComplex.new( ((@a*other.a)+(@b*other.b))/((other.a**2)+(other.b**2)) ,((@b*other.a)-(@a*other.b))/((other.a**2)+(other.b**2)))
-	end
+    end
 end
